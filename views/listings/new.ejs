@@ -1,0 +1,46 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <br><br>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h2>create new listening</h2>
+    
+    <form method="post" action="/listings"  novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" type="text" placeholder="Add a title" class="form-control" required>
+            <div class="valid-feedback">Title looks Goood!</div>
+            <!-- valid and invalid class for showing msg in form by bootstrap -->
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+            <input name="listing[description]" type="text" placeholder="Enter description" class="form-control" required>
+            <div class="invalid-feedback">Enter a short description</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label"> upload Image </label>
+            <input name="listing[image]" type="file" placeholder="Enter image url/link" class="form-control">
+        </div>
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" type="text" placeholder="1200" class="form-control" required>
+            <div class="invalid-feedback">Enter a Valid price</div>
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" type="text" placeholder="Jaipur, Rajasthan" class="form-control" required>
+            <div class="invalid-feedback">Location should be vaild</div>
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" type="text" placeholder="India" class="form-control" required>
+            <div class="invalid-feedback">Country should be valid</div>
+        </div>
+        <button class="btn btn-dark add-btn">add</button>
+    </form>
+</div>
+</div>
+<br><br>
+</body>
